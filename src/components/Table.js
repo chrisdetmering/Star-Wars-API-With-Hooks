@@ -6,21 +6,33 @@ class Table extends Component {
         const peoples = () => {
             return this.props.characters.map((character => {
                 return (
-                <tr  className="table">
-                    <td>{character.name}</td>
-                    <td>{character.birth_year}</td>
-                    <td>{character.height}</td>
-                    <td>{character.mass}</td>
-                    <td>{character.homeworld}</td>
-                    <td>{character.species}</td>
-                </tr>
+                    <tr>
+                        <td>{character.name}</td>
+                        <td>{character.birth_year}</td>
+                        <td>{character.height}</td>
+                        <td>{character.mass}</td>
+                        <td>{character.homeworld}</td>
+                        <td>{character.species}</td>
+                    </tr>
                 )
             }))
         }
 
         return (
             <div>
-                {peoples()}
+                <table className="table">
+                    <thead>
+                        <td>Name</td>
+                        <td>Birth Year</td>
+                        <td>Height</td>
+                        <td>Mass</td>
+                        <td>Homeworld</td>
+                        <td>Species</td>
+                    </thead>
+                    <tbody>
+                        {peoples()}
+                    </tbody>
+                </table>
             </div>
         )
     }
