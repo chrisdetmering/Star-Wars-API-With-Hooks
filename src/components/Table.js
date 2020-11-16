@@ -12,7 +12,6 @@ class Table extends Component {
                         <td>{character.height}</td>
                         <td>{character.mass}</td>
                         <td>{character.homeworld}</td>
-                        <td>{character.species}</td>
                     </tr>
                 )
             }))

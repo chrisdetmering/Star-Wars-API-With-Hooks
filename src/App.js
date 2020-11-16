@@ -8,23 +8,18 @@ import Input from './components/Input'
 const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  // const [planets, setPlanets] = useState([])
+  const [species, setSpecies] = useState([])
 
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await axios('https://swapi.dev/api/people/?page=1')
+      const speciesResponse = await axios('https://swapi.dev/api/species/?page=1')
       console.log(response.data.results);
       
       for (const character of response.data.results) {
         const homeworld = await axios.get(character.homeworld); //planet url
         character.homeworld = homeworld.data.name;
         console.log(character.homeworld);
-      }
-
-      for (const character of response.data.results) {
-        const species = await axios.get(character.species); //species url
-        character.species = species.data.name;
-        console.log(character.species)
       }
       
       setCharacters(response.data.results)
