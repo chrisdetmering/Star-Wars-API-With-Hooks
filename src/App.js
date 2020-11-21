@@ -24,6 +24,10 @@ const App = () => {
       }
       
       setCharacters(response.data.results)
+
+      if (species === []) {
+        species = "human"
+      }
     }
 
     fetchCharacters();
