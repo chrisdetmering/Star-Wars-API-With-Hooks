@@ -27,7 +27,8 @@ const App = () => {
 
       if (species === []) {
         species = "human"
-      }
+      } 
+      
     }
 
     fetchCharacters();
