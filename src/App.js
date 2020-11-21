@@ -17,7 +17,7 @@ const App = () => {
       console.log(response.data.results);
       
       for (const character of response.data.results) {
-        const homeworld = await axios.get(character.homeworld); //planet url
+        const homeworld = await axios.get(character.homeworld); 
         character.homeworld = homeworld.data.name;
         console.log(character.homeworld);
       }
