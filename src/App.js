@@ -17,7 +17,8 @@ const App = () => {
       console.log(response.data.results);
       
       for (const character of response.data.results) {
-        const homeworld = await axios.get(character.homeworld); 
+        const homeworld = await axios.get(character.homeworld);
+        const species = await axios.get(character.species); 
         character.homeworld = homeworld.data.name;
         console.log(character.homeworld);
       }
@@ -32,7 +33,7 @@ const App = () => {
     <div>
         <h1>Star Wars API</h1>
 
-       <Input /> 
+      <Input /> 
       <Table characters={characters} />
     </div>
   )
