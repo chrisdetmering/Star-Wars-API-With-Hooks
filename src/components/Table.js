@@ -18,6 +18,10 @@ class Table extends Component {
             }))
         }
 
+        const isLoading = () => {
+            
+        }
+
         return (
             <div>
                 <table className="table">

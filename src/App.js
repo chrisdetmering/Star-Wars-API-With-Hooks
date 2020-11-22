@@ -25,6 +25,7 @@ const App = () => {
       }
       
       setCharacters(response.data.results)
+      setIsLoading(false);
     }
 
     fetchCharacters();
@@ -35,7 +36,7 @@ const App = () => {
         <h1>Star Wars API</h1>
 
       <Input /> 
-      <Table characters={characters} />
+      <Table characters={characters} isLoading={isLoading} />
     </div>
   )
 }
