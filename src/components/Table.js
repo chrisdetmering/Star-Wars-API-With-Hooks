@@ -18,8 +18,8 @@ class Table extends Component {
             }))
         }
 
-        const isLoading = (props) => {
-            return isLoading ? (<h1>Loading...</h1>) : Hello
+        const isLoading = ({ isLoading }) => {
+            return isLoading ? <h1>Loading...</h1> : {peoples}
         }
 
         return (
