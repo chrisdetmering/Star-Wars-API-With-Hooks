@@ -8,7 +8,7 @@ import Input from './components/Input'
 const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [species, setSpecies] = useState([])
+  
 
   useEffect(() => {
     const fetchCharacters = async () => {
