@@ -5,7 +5,7 @@ export class Input extends Component {
         return (
             <div>
                 <input type="text"></input>
-                <button>X</button>
+                <button>Search</button>
             </div>
         )
     }

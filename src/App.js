@@ -18,17 +18,13 @@ const App = () => {
       
       for (const character of response.data.results) {
         const homeworld = await axios.get(character.homeworld);
-        const species = await axios.get(character.species); 
         character.homeworld = homeworld.data.name;
-        console.log(character.homeworld);
+
+        const species = await axios.get(character.species); 
+        !species.data.name ? character.species = "Human" : character.species = species.data.name;
       }
       
       setCharacters(response.data.results)
-
-      if (species === []) {
-        species = "human"
-      } 
-      
     }
 
     fetchCharacters();
