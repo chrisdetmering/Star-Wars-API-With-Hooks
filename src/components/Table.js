@@ -18,8 +18,8 @@ class Table extends Component {
             }))
         }
 
-        const isLoading = () => {
-            
+        const isLoading = (props) => {
+            return isLoading ? (<h1>Loading...</h1>) : Hello
         }
 
         return (
@@ -35,6 +35,7 @@ class Table extends Component {
                     </thead>
                     <tbody>
                         {peoples()}
+                        {isLoading}
                     </tbody>
                 </table>
             </div>
