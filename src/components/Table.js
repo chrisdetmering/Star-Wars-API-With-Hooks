@@ -3,25 +3,10 @@ import React, { Component } from 'react'
 class Table extends Component {
     render() {
 
-        const peoples = () => {
-            return this.props.characters.map((character => {
-                return (
-                    <tr>
-                        <td>{character.name}</td>
-                        <td>{character.birth_year}</td>
-                        <td>{character.height}</td>
-                        <td>{character.mass}</td>
-                        <td>{character.homeworld}</td>
-                        <td>{character.species}</td>
-                    </tr>
-                )
-            }))
-        }
-
-        const isLoading = () => {
-            return isLoading ? <h1>Loading...</h1> : 
+        const isLoadingTrue = () => {
+            return this.props.isLoading ? <h1>Loading...</h1> : 
             (
-                 this.props.characters.map((character => {
+                this.props.characters.map((character => {
                     return (
                         <tr>
                             <td>{character.name}</td>
@@ -48,7 +33,7 @@ class Table extends Component {
                         <td>Species</td>
                     </thead>
                     <tbody>
-                        {isLoading()}
+                        {isLoadingTrue()}
                     </tbody>
                 </table>
             </div>
