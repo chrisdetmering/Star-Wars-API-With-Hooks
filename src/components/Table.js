@@ -18,8 +18,22 @@ class Table extends Component {
             }))
         }
 
-        const isLoading = ({ isLoading }) => {
-            return isLoading ? <h1>Loading...</h1> : {peoples}
+        const isLoading = () => {
+            return isLoading ? <h1>Loading...</h1> : 
+            (
+                 this.props.characters.map((character => {
+                    return (
+                        <tr>
+                            <td>{character.name}</td>
+                            <td>{character.birth_year}</td>
+                            <td>{character.height}</td>
+                            <td>{character.mass}</td>
+                            <td>{character.homeworld}</td>
+                            <td>{character.species}</td>
+                        </tr>
+                    )
+                }))
+            )
         }
 
         return (
@@ -34,8 +48,7 @@ class Table extends Component {
                         <td>Species</td>
                     </thead>
                     <tbody>
-                        {peoples()}
-                        {isLoading}
+                        {isLoading()}
                     </tbody>
                 </table>
             </div>
