@@ -8,12 +8,11 @@ const Input = (props) => {
         setText(e.target.value)
 
         if (text.length > 0) {
-            props.characters = props.characters.filter((character) => {
+            props.characters.filter((character) => {
                 return character.name.match(text);
             })
         }
     } 
-
 
     return (
         <div>
@@ -23,6 +22,8 @@ const Input = (props) => {
             value={text}
             onChange={handleChange}
             />
+
+           
             
         </div>
     )
