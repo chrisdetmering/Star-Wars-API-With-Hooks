@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Table extends Component {
     render() {
 
@@ -22,6 +23,7 @@ class Table extends Component {
         }
 
         return (
+
             <div>
                 <table className="table">
                     <thead>
@@ -36,6 +38,8 @@ class Table extends Component {
                         {isLoadingTrue()}
                     </tbody>
                 </table>
+
+                
             </div>
         )
     }

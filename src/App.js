@@ -9,7 +9,6 @@ const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   
-
   useEffect(() => {
     const fetchCharacters = async () => {
       const response = await axios('https://swapi.dev/api/people/?page=1')
@@ -36,7 +35,7 @@ const App = () => {
     <div>
         <h1>Star Wars API</h1>
 
-      <Input /> 
+      <Input characters={characters} isLoading={isLoading}/> 
       <Table characters={characters} isLoading={isLoading} />
     </div>
   )

@@ -1,14 +1,31 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export class Input extends Component {
-    render() {
-        return (
-            <div>
-                <input type="text"></input>
-                <button>Search</button>
-            </div>
-        )
-    }
+
+const Input = (props) => {
+    const [text, setText] = useState('')
+
+    const handleChange = (e) => {
+        setText(e.target.value)
+
+        if (text.length > 0) {
+            props.characters = props.characters.filter((character) => {
+                return character.name.match(text);
+            })
+        }
+    } 
+
+
+    return (
+        <div>
+            <input 
+            type="text" 
+            placeholder="Search Characters"
+            value={text}
+            onChange={handleChange}
+            />
+            
+        </div>
+    )
 }
 
 export default Input
