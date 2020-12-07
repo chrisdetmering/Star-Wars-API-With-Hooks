@@ -4,6 +4,7 @@ import './App.css'
 import axios from "axios"
 import Table from "./components/Table"
 import Input from './components/Input'
+import $ from 'jquery'
 
 const App = () => {
   const [characters, setCharacters] = useState([])
