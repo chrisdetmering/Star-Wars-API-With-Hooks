@@ -31,6 +31,14 @@ const App = () => {
     fetchCharacters();
   
   }, [])
+
+  const characterSearch = async (searchItem) => {
+      setIsLoading(true);
+      const characterSearchResponse = await axios.get(
+        'https://swapi.dev/api/people/?search=${searchTerm}'
+      )
+
+  }
   
   return(
     <div>
