@@ -4,14 +4,14 @@ import './App.css'
 import axios from "axios"
 import Table from "./components/Table"
 import Input from './components/Input'
-import $ from 'jquery'
+
 
 const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   
   useEffect(() => {
-    const fetchCharacters = async () => {
+      const fetchCharacters = async () => {
       const response = await axios('https://swapi.dev/api/people/?page=1')
       const speciesResponse = await axios('https://swapi.dev/api/species/?page=1')
       console.log(response.data.results);
@@ -27,9 +27,9 @@ const App = () => {
       setCharacters(response.data.results)
       setIsLoading(false);
     }
-
+    
     fetchCharacters();
-   
+  
   }, [])
   
   return(
