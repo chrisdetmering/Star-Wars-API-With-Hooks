@@ -31,6 +31,9 @@ const App = () => {
   
   }, [])
 
+
+  // Search Function
+  
   const characterSearch = async (searchTerm) => {
       setIsLoading(true);
       const characterSearchResponse = await axios.get(
