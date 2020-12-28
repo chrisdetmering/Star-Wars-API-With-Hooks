@@ -12,7 +12,7 @@ const App = () => {
   
   useEffect(() => {
       const fetchCharacters = async () => {
-      const response = await axios('https://swapi.dev/api/people/?page=1')
+      const response = await axios(`https://swapi.dev/api/people/?page=1`)
       const speciesResponse = await axios('https://swapi.dev/api/species/?page=1')
       console.log(response.data.results);
       
