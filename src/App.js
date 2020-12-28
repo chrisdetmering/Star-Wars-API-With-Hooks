@@ -32,19 +32,35 @@ const App = () => {
   
   }, [])
 
-  const characterSearch = async (searchItem) => {
+  const characterSearch = async (searchTerm) => {
       setIsLoading(true);
       const characterSearchResponse = await axios.get(
-        'https://swapi.dev/api/people/?search=${searchTerm}'
+        `https://swapi.dev/api/people/?search=${searchTerm}`
       )
 
+      for (const character of characterSearchResponse.data.results) {
+        const homeworld = await axios.get(character.homeworld);
+        character.homeworld = homeworld.data.name;
+      
+
+      const species = await axios.get(character.species);
+      !species.data.name
+      ? (character.species = "Human")
+      : (character.species = species.data.name);
+
   }
+
+  setCharacters(characterSearchResponse.data.results);
+  setIsLoading(false);
+
+}
+  
   
   return(
     <div>
         <h1>Star Wars API</h1>
 
-      <Input characters={characters} isLoading={isLoading}/> 
+      <Input characters={characterSearch} isLoading={isLoading}/> 
       <Table characters={characters} isLoading={isLoading} />
     </div>
   )
