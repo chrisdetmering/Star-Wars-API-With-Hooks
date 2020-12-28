@@ -23,7 +23,6 @@ const App = () => {
         const species = await axios.get(character.species); 
         !species.data.name ? character.species = "Human" : character.species = species.data.name;
       }
-      
       setCharacters(response.data.results)
       setIsLoading(false);
     }
@@ -47,14 +46,10 @@ const App = () => {
       !species.data.name
       ? (character.species = "Human")
       : (character.species = species.data.name);
-
   }
-
   setCharacters(characterSearchResponse.data.results);
   setIsLoading(false);
-
-}
-  
+  };
   
   return(
     <div>
