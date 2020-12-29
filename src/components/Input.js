@@ -14,7 +14,7 @@ const handleSubmit = (e) => {
 };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="input" onSubmit={handleSubmit}>
             <input 
                 type="text"
                 placeholder="Search Characters"

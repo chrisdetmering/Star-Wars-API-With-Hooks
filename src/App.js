@@ -56,7 +56,7 @@ const App = () => {
   
   return(
     <div>
-        <h1>Star Wars API</h1>
+        <h1 className="header">Star Wars API</h1>
 
       <Input characters={characterSearch} isLoading={isLoading}/> 
       <Table characters={characters} isLoading={isLoading} />
