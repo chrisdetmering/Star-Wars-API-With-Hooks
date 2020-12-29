@@ -6,21 +6,24 @@ const Input = (props) => {
     const handleChange = (e) => {
         setText(e.target.value)
         console.log(text);
-}; 
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    props.characters(text);
-};
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        props.characters(text);
+    };
 
     return (
         <form className="input" onSubmit={handleSubmit}>
-            <input 
+            <input
                 type="text"
                 placeholder="Search Characters"
                 onChange={handleChange}
                 value={text}
+
             />
+            <button>Search</button>
         </form>
     )
 }
