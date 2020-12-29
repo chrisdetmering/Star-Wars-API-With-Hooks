@@ -10,6 +10,8 @@ const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   
+  // Fetch API data
+
   useEffect(() => {
       const fetchCharacters = async () => {
       const response = await axios(`https://swapi.dev/api/people/?page=1`)
