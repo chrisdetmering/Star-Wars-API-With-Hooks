@@ -5,6 +5,7 @@ const Input = (props) => {
 
     const handleChange = (e) => {
         setText(e.target.value)
+        console.log(text);
 }; 
 
 const handleSubmit = (e) => {

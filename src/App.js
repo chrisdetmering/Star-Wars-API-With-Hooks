@@ -5,7 +5,6 @@ import axios from "axios"
 import Table from "./components/Table"
 import Input from './components/Input'
 
-
 const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
