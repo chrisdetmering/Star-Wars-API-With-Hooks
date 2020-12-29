@@ -20,7 +20,6 @@ const Input = (props) => {
                 placeholder="Search Characters"
                 onChange={handleChange}
                 value={text}
-
             />
             <button>Search</button>
         </form>
