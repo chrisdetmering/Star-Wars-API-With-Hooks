@@ -9,6 +9,7 @@ class Table extends Component {
             (
                 this.props.characters.map((character => {
                     return (
+                        
                         <tr>
                             <td>{character.name}</td>
                             <td>{character.birth_year}</td>
