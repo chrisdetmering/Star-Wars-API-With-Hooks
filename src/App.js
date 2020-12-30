@@ -8,7 +8,7 @@ import Input from './components/Input'
 const App = () => {
   const [characters, setCharacters] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-
+  
   // Fetch API data
 
   useEffect(() => {
@@ -31,7 +31,6 @@ const App = () => {
     
     fetchCharacters();
   }, [])
-
 
   // Search Function
 
