@@ -4,7 +4,7 @@ const Input = (props) => {
     
     return (
         <form className="input">
-            <input
+            <input 
                 type="text"
                 placeholder="Search Characters"
                 onChange={(e) => props.characters(e.target.value)}

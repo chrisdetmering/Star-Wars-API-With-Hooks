@@ -13,9 +13,6 @@ td, th {
 .input {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    
-
 }
 
 .header {
