@@ -1,6 +1,8 @@
 .table {
+    width: 80%;
     margin: auto;
     margin-top: 50px;
+    border: 1px solid black;
 }
 
 td, th {
@@ -12,6 +14,7 @@ td, th {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    
 
 }
 
