@@ -10,9 +10,11 @@ td, th {
     padding: 0.5rem;
 }
 
-.input {
-    display: flex;
-    justify-content: center;
+input {
+    margin-left: 10.03%;
+    width: 79.5%;
+    height: 30px;
+    
 }
 
 .header {
