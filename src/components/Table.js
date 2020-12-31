@@ -27,7 +27,7 @@ class Table extends Component {
 
             <div>
                 <table className="table">
-                    <thead>
+                    <thead className="thead">
                         <td>Name</td>
                         <td>Birth Year</td>
                         <td>Height</td>
