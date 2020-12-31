@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 const Input = (props) => {
-    
+
     return (
-        <div className="input">
-            <input 
+        <div>
+            <input
                 type="text"
                 placeholder="Search Characters"
                 onChange={(e) => props.characters(e.target.value)}
