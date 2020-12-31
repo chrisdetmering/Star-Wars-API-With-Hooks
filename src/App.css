@@ -13,12 +13,6 @@ h1 {
     
 }
 
-@media (max-width: 662px) {
-    .table {
-       font-size: .9rem;
-    }
-}
-
 td, th {
     border: 1px solid yellow;
     padding: 0.5rem;
@@ -57,4 +51,10 @@ input::placeholder {
     text-align: center;
     font-family: fantasy;
     letter-spacing: 3px;
+}
+
+@media (max-width: 662px) {
+    .table {
+       font-size: .9rem;
+    }
 }
