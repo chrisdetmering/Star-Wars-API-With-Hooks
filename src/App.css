@@ -16,7 +16,6 @@ h1 {
 td, th {
     border: 1px solid yellow;
     padding: 0.5rem;
-    
 }
 
 input {
@@ -45,7 +44,6 @@ body {
 
 .thead {
     text-align: center;
-   
 }
 
 input::placeholder {

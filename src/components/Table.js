@@ -1,15 +1,12 @@
 import React, { Component } from 'react'
 
-
 class Table extends Component {
     render() {
-
         const isLoadingTrue = () => {
             return this.props.isLoading ? <h1>Loading...</h1> :
                 (
                     this.props.characters.map((character => {
                         return (
-
                             <tr>
                                 <td>{character.name}</td>
                                 <td>{character.birth_year}</td>
@@ -21,7 +18,7 @@ class Table extends Component {
                         )
                     }))
                 )
-        }
+            }
 
         return (
             <div>
