@@ -18,10 +18,10 @@ const App = () => {
       console.log(response.data.results);
 
       for (const character of response.data.results) {
-        const homeworld = await axios.get(character.homeworld);
+        const homeworld = await axios.get("https" + character.homeworld.slice(4));
         character.homeworld = homeworld.data.name;
 
-        const species = await axios.get(character.species);
+        const species = await axios.get("https" + character.species.slice(4));
         !species.data.name ? character.species = "Human" : character.species = species.data.name;
       }
 
@@ -41,10 +41,10 @@ const App = () => {
     )
 
     for (const character of characterSearchResponse.data.results) {
-      const homeworld = await axios.get(character.homeworld);
+      const homeworld = await axios.get("https" + character.homeworld.slice(4));
       character.homeworld = homeworld.data.name;
 
-      const species = await axios.get(character.species);
+      const species = await axios.get("https" + character.species.slice(4));
       !species.data.name
         ? (character.species = "Human")
         : (character.species = species.data.name);
