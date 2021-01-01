@@ -24,7 +24,6 @@ class Table extends Component {
         }
 
         return (
-
             <div>
                 <table className="table">
                     <thead className="thead">
