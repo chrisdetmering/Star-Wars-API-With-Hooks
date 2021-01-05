@@ -12,7 +12,7 @@ const App = () => {
   // Fetch API data
 
   useEffect(() => {
-      const fetchCharacters = async () => {
+    const fetchCharacters = async () => {
       const response = await axios(`https://swapi.dev/api/people/?page=1`)
       const speciesResponse = await axios('https://swapi.dev/api/species/?page=1')
       console.log(response.data.results);
@@ -24,13 +24,12 @@ const App = () => {
         if (character.species.length !== 0) {
           const species = await axios.get("https" + character.species[0].slice(4));
           !species.data.name ? character.species = "Human" : character.species = species.data.name;
-          // character.species = !species.data.name ? "Human" : species.data.name;
         } else {
           character.species = "Human"
         }
       }
 
-      setCharacters(response.data.results)
+      setCharacters(response.data.results);
       setIsLoading(false);
     }
 
@@ -52,7 +51,6 @@ const App = () => {
       if (character.species.length !== 0) {
         const species = await axios.get("https" + character.species[0].slice(4));
         !species.data.name ? character.species = "Human" : character.species = species.data.name;
-        // character.species = !species.data.name ? "Human" : species.data.name;
       } else {
         character.species = "Human"
       }
