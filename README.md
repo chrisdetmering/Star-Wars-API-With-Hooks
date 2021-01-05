@@ -15,4 +15,4 @@ You can visit the App [here](https://starwarsapi4.herokuapp.com)
 
 # Summary
 
-This the 6th application I have completed in my Software development journey. I was initially very excited to start this project because i was finally going to learn how to fetch data from an API which is a critical step to learning Web Development.
+This the 6th application I have completed in my Software development journey. I was initially very excited to start this project because I was finally going to learn how to fetch data from an API which is a critical step to learning Web Development.
