@@ -4,7 +4,7 @@
 
 # Instructions
 
-Click on the "Search Characters" input bar and search for your favotite Star Wars character seen on the page, the app will automatically find your chaaracter as you type, no need to worry about submission.
+Click on the "Search Characters" input bar and search for your favorite Star Wars character seen on the page, the app will automatically find your chaaracter as you type, no need to worry about submission.
 
 
 You can visit the App [here](https://starwarsapi4.herokuapp.com)
